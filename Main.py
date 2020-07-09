@@ -3,8 +3,10 @@ from mailbox import Message
 import telebot
 from telebot import types
 
+import config
+
 bot = telebot.TeleBot('1314188183:AAHb_EmLam3dPet1SJnwaYlXcZFO8eEUVRs')
-STICKER_ID = 'CAACAgIAAxkBAAMpXwQ68LQDnCu0uyjMbrY_c3-6OBcAAlgXAAJxzH0Y4VVKisA3h_oaBA'
+STICKER_ID = config.TOKEN
 @bot.message_handler(commands=['start'])
 def start_handler(message: Message):
     bot.send_message(message.chat.id,'Привет от музыкального бота \n введите команду /help для получения большей информации')
